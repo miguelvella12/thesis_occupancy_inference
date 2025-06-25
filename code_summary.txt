@@ -1,0 +1,21 @@
+Data/
+- dataset_loader.py: Defines the OccupancyDataset class used for loading UCI data in time-series format.
+- delay_simulation.py: Implements sensor delay simulation by shifting input sequences.
+
+EDA/
+- EDA.ipynb: (Notebook) Exploratory Data Analysis on the UCI dataset, including visualizations and insights.
+
+models/
+- hybrid.py: Hybrid LSTM + Transformer model for handling both short- and long-term dependencies.
+- randomforest.py: Random forest model for baseline classification.
+- lstm.py: LSTM-based sequence model for time-dependent occupancy inference.
+- transformer.py: Transformer-based sequence model using attention over sensor input.
+
+utils/
+- save_metrics.py: Contains utility functions for saving and loading metrics, such as F1, Precision, and Recall.
+- train.py: Contains the training loop, evaluation function, and metric computation utilities used across both training scripts.
+
+train_model.py: Handles training of models, including supervised pretraining on UCI and fine-tuning on LAB42, or training solely on LAB42 data.
+run_all.ipynb: (Notebook) Used to orchestrate and visualize experiments or training runs. Also contains evaluation of simulated delay.
+manual_check.ipynb: (Notebook) Evaluation of models using manually labelled data.
+track_results.ipynb: (Notebook) Used to track and visualize results from experimental tracks, including metrics and model performance.
